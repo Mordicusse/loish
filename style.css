@@ -1,8 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 /*
 font-family: "Anton", sans-serif;
 font-family: "DM Sans", sans-serif;
+font-family: "Outfit", sans-serif;
+->
+// <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.outfit-<uniquifier> {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
 
 
 nb: c'est la derniere css ecrite dans index.html au debut dans les <link> qui a le dernier mot si conflit
@@ -13,6 +24,10 @@ nb: c'est la derniere css ecrite dans index.html au debut dans les <link> qui a 
     padding: 0;
 }
 
+
+body.galerie{
+    background-color: #756eb3;
+}
 .slide{
     width: 100%;
     min-height: 100vh;
@@ -219,85 +234,35 @@ h1{
     align-items: center;
 }
 
-/************* Présentation *************/
-#pres{
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 60vh;
-}
-#pres .gauche{
-    width: 40%;
-    background-color: black;
-}
-
-#pres .droite{
-    width: 60%;
-    background-color: white;
-}
-
-#pres .container{
-    padding: 20px 15px 30px;
-}
-
-#pres h2{
-    font-family: "Anton", sans-serif;
-    font-size: 35px;
-    margin-bottom: 15px;
-}
-
-#pres p{
-    font-family: "DM Sans", sans-serif;
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-#pres .btn{
-    background-color: black;
-    color: white;
-    display: block;
-    width: fit-content;
-    padding: 6px 15px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 20px;
-    text-decoration: none;
-    margin: 15px auto;
-}
-
 /**************** galerie ************/
 #galerie h2{
-    font-family: "Anton", sans-serif;
-    font-size: 35px;
+    font-family: "outfit", sans-serif;
+    font-size: 15px;
 }
 
 #galerie .container{
-    padding-top: 30px;
+    padding-top: 100px;
 }
 
 #container-gal{
     display: grid;
-    height: 60vh;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    gap: 10px;
+    height: 250vh;
+    grid-template-columns: repeat(17, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    gap: 20px;
 }
 
 .img1{
-    grid-column: 1 / span 4;
-    grid-row: 1 / span 12;
-}
-
-
-#container-gal .images{
-
-    background-color: black;
+    grid-column: 2 / span 5;
+    grid-row: 2 / span 2;
 }
 
 
 .img2{
-    grid-column: 5 / span 4;
-    grid-row: 1 / span 5;
-    background-color: red !important;
+    grid-column: 1 / span 4;
+    grid-row: 4 / span 3 ;
 }
+
 
 .images a{
     display: block;
