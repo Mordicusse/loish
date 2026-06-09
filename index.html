@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>LoISH : Home </title>
+</head>
+<body>
+<div id="menu-mobile">
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#galerie">Gallery</a></li>
+            <li><a href="#artiste">Artist</a></li>
+            <li><a href="#livre">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="slide" id="home">
+    <header>
+        <div id="logo">LoISH</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#pres">Gallery</a></li>
+                <li><a href="#artiste">Artist</a></li>
+                <li><a href="#livre">Books</a></li>
+            </ul>
+            <div id="burger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+    <div id="hero">
+        <h1>
+            <img src="loishnoir.svg" >
+        </h1>
+    </div>
+    <div id="social">social links</div>
+</div>
+<div class="slide" id="pres">
+    <div class="gauche"></div>
+    <div class="droite">
+        <div class="container">
+            <h2>Présentation</h2>
+            <p><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipisicing elit. Adipisci delectus eum explicabo minima nisi recusandae velit? Aperiam, cum delectus fuga fugit hic laborum nam provident quidem. Dolorum excepturi facilis molestiae recusandae <strong>rem repellat reprehenderit</strong>. Aliquam enim eos esse et excepturi harum, quae quia sint sit voluptate? Architecto sapiente soluta ut!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci delectus eum explicabo minima nisi <strong>recusandae velit?</strong> Aperiam, cum delectus fuga fugit hic laborum nam provident quidem. Dolorum excepturi facilis molestiae recusandae <strong>rem repellat reprehenderit</strong>. Aliquam enim eos esse et excepturi harum, quae quia sint sit voluptate? Architecto sapiente soluta ut!</p>
+            <a href="#" class="btn">Voir vidéo</a>
+        </div>
+    </div>
+</div>
+<div class="slide" id="galerie">
+    <div class="container">
+        <h2>Galerie</h2>
+        <div id="container-gal">
+
+            <div class="images img1">
+                <a href="images/Avatar.jpg" data-lightbox="gal" class="gal">
+                    <img src="images/Avatar.jpg" alt="image">
+                </a>
+            </div>
+            <div class="images img2">
+                <a href="images/Avatar.jpg" data-lightbox="gal" class="gal">
+                    <img src="images/Avatar.jpg" alt="image">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="dist/js/glightbox.min.js"></script>
+<script>
+    var lightbox = GLightbox();
+    var lightboxDescription = GLightbox({
+        selector: '.gal'
+    });
+
+    const burger = document.querySelector("#burger");
+    const menuMobile = document.querySelector("#menu-mobile");
+    //select links (retourne un tableau - array)
+    const links = document.querySelectorAll ("#menu-mobile nav ul li a")
+
+
+    // fonction fléchee () => {}
+    burger.addEventListener("click",()=>{
+        burger.classList.toggle("open");
+        menuMobile.classList.toggle("open");
+    })
+
+    //boucle/parcourir le tableau link
+    for(let link of links){
+        link.addEventListener("click",()=>{
+            burger.classList.remove("open")
+            menuMobile.classList.remove("open")
+        })
+    }
+
+</script>
+</body>
+</html>
