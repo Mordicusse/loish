@@ -25,308 +25,364 @@ nb: c'est la derniere css ecrite dans index.html au debut dans les <link> qui a 
 }
 
 
-body.galerie{
-    background-color: #756eb3;
-}
-.slide{
-    width: 100%;
-    min-height: 100vh;
-}
-
-.container{
-    width: 90%;
-    margin: 0 auto;
-}
-
-#home{
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-}
-
-header{
-    grid-column: 1 / span 12;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header nav{
-    width: 60%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-header nav ul{
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    list-style:none;
-}
-
-header nav ul li a{
-    color: black;
-    text-decoration: none;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 600;
-}
-
-h1{
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    width: 20vh;
-
-
-
-}
-
-#burger{
-    width: 50px;
-    height: 40px;
-    position: relative;
-    z-index: 100;
-    display: none;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-}
-
-#burger .bar{
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: black;
-    transition: all 0.5s;
-}
-
-#burger .bar:nth-child(1)
-{
-    top: 0;
-    width: 100%;
-}
-
-#burger .bar:nth-child(2)
-{
-    top: 50%;
-    width: 70%;
-    transform: translateY(-50%);
-}
-
-#burger .bar:nth-child(3)
-{
-    top: 100%;
-    transform: translateY(-100%);
-    width: 45%;
-}
-
-#burger.open .bar:nth-child(1){
-    /* le .open sert à l'animation des barres du menu, et l'espace veut dire -enfant de- */
-    top: 50%;
-    width:100%;
-    background-color: #5941f3;
-    transform: translateY(-50%) rotate(45deg);
-}
-
-#burger.open .bar:nth-child(2){
-    transform: translateY(-50%) scale(0);
-    opacity: 0;
-}
-
-#burger.open .bar:nth-child(3){
-    transform: translateY(-50%) rotate(-45deg);
-    background-color: #5941f3;
-    top:50%;
-    width: 100%;
-}
-
-#menu-mobile{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #222222;
-    position: fixed;
-    top: 0;
-    left: 100%;
-    /*le menu est cahé à gauche avec le left 100%
-    et la transition se place ici dessous pour le faire slide  a la vitesse voulue */
-    z-index: 99;
-    width: 100%;
-    height: 100vh;
-    transition: all 0.8s;
-}
-
-#menu-mobile.open{
-    left: 0 ;
-}
-
-#menu-mobile nav ul{
-    list-style: none;
-}
-
-#menu-mobile nav ul li{
-    margin-bottom: 25px;
-}
-
-#menu-mobile nav ul li a{
-    text-decoration: none;
-    color: white;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 25px;
-}
-
-#logo{
-    font-family: 'Anton', sans-serif;
-    background-color: black;
-    color: white;
-    padding: 10px 15px;
-    margin-left: 15px;
-}
-
-#hero{
-    grid-column: 6; /*horizontal*/
-    grid-row: 5 / span 2;  /*vertical*/
-} /*span = etendu sur x colonnes*/
-
-#hero h4{
-    font-family: "DM Sans", sans-serif;
-    font-size: 30px;
-    font-weight: 200;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    color: black;
-}
-
-#hero h1{
-    font-family: "Anton", sans-serif;
-    font-size: 80px;
-    font-weight: 800;
-    letter-spacing: 5px;
-    color: black;
-}
-
-#hero p{
-    font-family: "DM Sans", sans-serif;
-    font-weight: 400;
-    color: #222222;
-    font-size: 18px;
-}
-
-#hero .btn{
-    background-color: black;
-    color: white;
-    display: block;
-    width: fit-content;
-    padding: 6px 15px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 20px;
-    text-decoration: none;
-    margin-top: 20px;
-}
-
-#social{
-    grid-column: 1 / span 2;
-    grid-row: 12 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/**************** galerie ************/
-#galerie h2{
-    font-family: "outfit", sans-serif;
-    font-size: 15px;
-}
-
-#galerie .container{
-    padding-top: 100px;
-}
-
-#container-gal{
-    display: grid;
-    height: 250vh;
-    grid-template-columns: repeat(17, 1fr);
-    grid-template-rows: repeat(15, 1fr);
-    gap: 20px;
-}
-
-.img1{
-    grid-column: 2 / span 5;
-    grid-row: 2 / span 2;
-}
-
-
-.img2{
-    grid-column: 1 / span 4;
-    grid-row: 4 / span 3 ;
-}
-
-
-.images a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-}
-
-.images a img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center ;
-}
-
-
-/************ Media ****************/
-
-@media all and (max-width: 1080px)
-{
-    #hero{
-        grid-column: 3 / span 6;
+body.home{
+        background-color: #d5d5ed;
     }
+
+body.galerie{
+    background-color: #ffffff;
 }
 
-@media all and (max-width: 815px)
-{
-    header nav ul{
-        display: none;
+body.artist{
+    background-color: #000000;
+}
+
+body.artist header{
+    color: white;
+}
+
+body.books{
+    background-color: #4c4a61;
+}
+
+
+    .slide{
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #home{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+    }
+
+    header{
+        grid-column: 1 / span 12;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     header nav{
-        justify-content: end;
+        width: 60%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    header nav ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        list-style:none;
+    }
+
+    header nav ul li a{
+        color: black;
+        text-decoration: none;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 600;
+    }
+
+    h1{
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        width: 15vh;
     }
 
     #burger{
-        display: block;
-        margin-right: 15px;
+        width: 50px;
+        height: 40px;
+        position: relative;
+        z-index: 100;
+        display: none;
+        top: 15px;
+        right: 15px;
     }
-}
 
-@media all and (max-width: 690px)
-{
-    #hero{
-        grid-column: 2 / span 10;
+    #burger .bar{
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: black;
+        transition: all 0.5s;
     }
-    #pres .gauche, #pres .droite{
+
+    #burger .bar:nth-child(1)
+    {
+        top: 0;
         width: 100%;
     }
-    #pres .gauche{
-        height: 300px;
+
+    #burger .bar:nth-child(2)
+    {
+        top: 50%;
+        width: 70%;
+        transform: translateY(-50%);
     }
 
-    #container-gal{
-        grid-template-columns: 1fr 1fr;
+    #burger .bar:nth-child(3)
+    {
+        top: 100%;
+        transform: translateY(-100%);
+        width: 45%;
     }
-}
 
-@media all and (max-width: 410px)
-{
+    #burger.open .bar:nth-child(1){
+        /* le .open sert à l'animation des barres du menu, et l'espace veut dire -enfant de- */
+        top: 50%;
+        width:100%;
+        background-color: #5941f3;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    #burger.open .bar:nth-child(2){
+        transform: translateY(-50%) scale(0);
+        opacity: 0;
+    }
+
+    #burger.open .bar:nth-child(3){
+        transform: translateY(-50%) rotate(-45deg);
+        background-color: #5941f3;
+        top:50%;
+        width: 100%;
+    }
+
+    #menu-mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #222222;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        /*le menu est cahé à gauche avec le left 100%
+        et la transition se place ici dessous pour le faire slide  a la vitesse voulue */
+        z-index: 99;
+        width: 100%;
+        height: 100vh;
+        transition: all 0.8s;
+    }
+
+    #menu-mobile.open{
+        left: 0 ;
+    }
+
+    #menu-mobile nav ul{
+        list-style: none;
+    }
+
+    #menu-mobile nav ul li{
+        margin-bottom: 25px;
+    }
+
+    #menu-mobile nav ul li a{
+        text-decoration: none;
+        color: white;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 25px;
+    }
+
+    #logo{
+        font-family: 'outfit', sans-serif;
+        background-color: black;
+        color: white;
+        padding: 10px 15px;
+        margin-left: 15px;
+    }
+
     #hero{
-        grid-row: 3 / span 7;
+        grid-column: 6 / span 2; /*horizontal*/
+        grid-row: 6 / span 2;  /*vertical*/
+        object-position: center center;
+    } /*span = etendu sur x colonnes*/
+
+
+    #social{
+        grid-column: 1 / span 2;
+        grid-row: 12 / span 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
+    /************************************************** GALERIE HOME *************************************************/
+    #galerie h2{
+        font-family: "outfit", sans-serif;
+        font-size: 15px;
+    }
+
+    #galerie .container{
+        padding-top: 100px;
+    }
+
     #container-gal{
-        grid-template-columns: 1fr;
+        display: grid;
+        height: 250vh;
+        grid-template-columns: repeat(17, 1fr);
+        grid-template-rows: repeat(14, 1fr);
+        gap: 20px;
     }
+
+    .img1{
+        grid-column: 2 / span 5;
+        grid-row: 4 / span 2;
+    }
+
+
+    .img2{
+        grid-column: 1 / span 5;
+        grid-row: 6 / span 3 ;
+    }
+
+    .img3{
+        grid-column: 6 / span 5;
+        grid-row: 6 / span 2 ;
+    }
+
+    .img4{
+        grid-column: 6 / span 4;
+        grid-row: 11 / span 3 ;
+    }
+
+    .img5{
+        grid-column: 14 / span 4;
+        grid-row: 9 / span 3 ;
+    }
+
+    .img6{
+        grid-column: 11 / span 3;
+        grid-row: 4 / span 4 ;
+    }
+
+    .img7{
+        grid-column: 2 / span 4;
+        grid-row: 9 / span 3 ;
+    }
+
+    .img8{
+        grid-column: 6 / span 8;
+        grid-row: 8 / span 3 ;
+    }
+
+    .img9{
+        grid-column: 7 / span 4;
+        grid-row: 3 / span 3 ;
+    }
+
+    .img10{
+        grid-column: 14 / span 4;
+        grid-row: 3 / span 3 ;
+    }
+
+    .img11{
+        grid-column: 14 / span 4;
+        grid-row: 6 / span 3 ;
+    }
+    .img12{
+        grid-column: 10 / span 4;
+        grid-row: 11 / span 2 ;
+    }
+
+
+
+
+
+    .images a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        opacity: 0;
+        transform: translateY(50px) scale(0.95);
+        transition: all 0.8s ease;
+    }
+
+    .images a.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    }
+
+    .images a img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center ;
+    }
+/*****************************************FOOTER**********************************************************/
+#footer{
+    background-color: #4c4a61;
+    color: white;
+    width: 80%;
+    height: 60vh;
+    margin: 100px;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    display: flex;
 }
+.container2{}
+
+h3{
+    font-family: 'outfit', sans-serif;
+}
+
+    /*********************************************************** Media *********************************************/
+
+    @media all and (max-width: 1080px)
+    {
+        #hero{
+            grid-column: 3 / span 6;
+        }
+    }
+
+    @media all and (max-width: 815px)
+    {
+        header nav ul{
+            display: none;
+        }
+
+        header nav{
+            justify-content: end;
+        }
+
+        #burger{
+            display: block;
+            margin-right: 15px;
+        }
+    }
+
+    @media all and (max-width: 690px)
+    {
+        #hero{
+            grid-column: 2 / span 10;
+        }
+        #pres .gauche, #pres .droite{
+            width: 100%;
+        }
+        #pres .gauche{
+            height: 300px;
+        }
+
+        #container-gal{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media all and (max-width: 410px)
+    {
+        #hero{
+            grid-row: 3 / span 7;
+        }
+        #container-gal{
+            grid-template-columns: 1fr;
+        }
+    }

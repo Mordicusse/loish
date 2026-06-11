@@ -9,14 +9,14 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>LoISH : Home </title>
 </head>
-<body>
+<body class="home">
 <div id="menu-mobile">
     <nav>
         <ul>
-            <li><a href="home">Home</a></li>
-            <li><a href="pages/galerie.html">Gallery</a></li>
-            <li><a href="#artiste">Artist</a></li>
-            <li><a href="#livre">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="galerie.html">Gallery</a></li>
+            <li><a href="artiste.html">Artist</a></li>
+            <li><a href="livre.html">Contact</a></li>
         </ul>
     </nav>
 </div>
@@ -26,9 +26,9 @@
         <nav>
             <ul>
                 <li><a href="home">Home</a></li>
-                <li><a href="pages/galerie.html">Gallery</a></li>
-                <li><a href="#artiste">Artist</a></li>
-                <li><a href="#livre">Books</a></li>
+                <li><a href="galerie.html">Gallery</a></li>
+                <li><a href="artiste.html">Artist</a></li>
+                <li><a href="livre.html">Books</a></li>
             </ul>
             <div id="burger">
                 <div class="bar"></div>
@@ -50,16 +50,71 @@
         <div id="container-gal">
 
             <div class="images img1">
+                <a href="images/the_deep_2019_dusk.png" data-lightbox="gal" class="gal">
+                    <img src="images/the_deep_2019_dusk.png" alt="image">
+                </a>
+            </div>
+            <div class="images img2">
+                <a href="images/autumn_walk_2021_cina.png" data-lightbox="gal" class="gal">
+                    <img src="images/autumn_walk_2021_cina.png" alt="image">
+                </a>
+            </div>
+            <div class="images img3">
                 <a href="images/scream_2023_dusk.png" data-lightbox="gal" class="gal">
                     <img src="images/scream_2023_dusk.png" alt="image">
                 </a>
             </div>
-            <div class="images img2">
+            <div class="images img4">
+                <a href="images/after_the_rain_2020_cina.png" data-lightbox="gal" class="gal">
+                    <img src="images/after_the_rain_2020_cina.png" alt="image">
+                </a>
+            </div>
+            <div class="images img5">
                 <a href="images/mushroom_2020_bloom.jpg" data-lightbox="gal" class="gal">
                     <img src="images/mushroom_2020_bloom.jpg" alt="image">
                 </a>
             </div>
+            <div class="images img6">
+                <a href="images/cascade_2022_dr.png" data-lightbox="gal" class="gal">
+                    <img src="images/cascade_2022_dr.png" alt="image">
+                </a>
+            </div>
+            <div class="images img7">
+                <a href="images/scrapbook_2023_cina.png" data-lightbox="gal" class="gal">
+                    <img src="images/scrapbook_2023_cina.png" alt="image">
+                </a>
+            </div>
+            <div class="images img8">
+                <a href="images/stingrays_2023_dr.png" data-lightbox="gal" class="gal">
+                    <img src="images/stingrays_2023_dr.png" alt="image">
+                </a>
+            </div>
+            <div class="images img9">
+                <a href="images/space_raccoons_2026_cand.png" data-lightbox="gal" class="gal">
+                    <img src="images/space_raccoons_2026_cand.png" alt="image">
+                </a>
+            </div>
+            <div class="images img10">
+                <a href="images/magpies_2025_dusk.png" data-lightbox="gal" class="gal">
+                    <img src="images/magpies_2025_dusk.png" alt="image">
+                </a>
+            </div>
+            <div class="images img11">
+                <a href="images/glitch_2025_bloom.png" data-lightbox="gal" class="gal">
+                    <img src="images/glitch_2025_bloom.png" alt="image">
+                </a>
+            </div>
+            <div class="images img12">
+                <a href="images/compassion_2024_dusk.png" data-lightbox="gal" class="gal">
+                    <img src="images/compassion_2024_dusk.png" alt="image">
+                </a>
+            </div>
         </div>
+    </div>
+</div>
+<div  id="footer">
+    <div class="container2">
+        <h3>FOOTER</h3>
     </div>
 </div>
 <script src="dist/js/glightbox.min.js"></script>
@@ -88,6 +143,22 @@
             menuMobile.classList.remove("open")
         })
     }
+
+        const images = document.querySelectorAll('.images a');
+
+        const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+        images.forEach(image => {
+        observer.observe(image);
+    });
 
 </script>
 </body>
