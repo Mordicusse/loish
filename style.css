@@ -37,7 +37,11 @@ body.artist{
     background-color: #000000;
 }
 
-body.artist header{
+body.artist header nav ul li a{
+    color: white;
+}
+
+body.books header nav ul li a{
     color: white;
 }
 
@@ -96,6 +100,13 @@ body.books{
         align-items: center;
         width: 15vh;
     }
+    #imggauche{
+        width: 5vh;
+        height: 10vh;
+        object-fit: cover;
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 12;
+    }
 
     #burger{
         width: 50px;
@@ -140,7 +151,7 @@ body.books{
         /* le .open sert à l'animation des barres du menu, et l'espace veut dire -enfant de- */
         top: 50%;
         width:100%;
-        background-color: #5941f3;
+        background-color: #dcddee;
         transform: translateY(-50%) rotate(45deg);
     }
 
@@ -151,7 +162,7 @@ body.books{
 
     #burger.open .bar:nth-child(3){
         transform: translateY(-50%) rotate(-45deg);
-        background-color: #5941f3;
+        background-color: #dcddee;
         top:50%;
         width: 100%;
     }
@@ -317,22 +328,133 @@ body.books{
         object-fit: cover;
         object-position: center center ;
     }
-/*****************************************FOOTER**********************************************************/
-#footer{
-    background-color: #4c4a61;
-    color: white;
-    width: 80%;
-    height: 60vh;
-    margin: 100px;
-    align-items: center;
-    justify-content: center;
-    padding: 100px;
-    display: flex;
-}
-.container2{}
 
-h3{
+    /**************************************************PRESENTATION ARTISTE***********************************/
+/*#presentation{
+    display: grid;
+    height: 60vh;
+    width: 80vh;
+    margin: 100px;
+    padding: 100px;
+    gap:50px;
+    background-color: #0f47ff;
+    color:white;
+}
+h4{
+    justify-content: center;
+    align-items: center;
     font-family: 'outfit', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.profilepic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center ;
+
+}*/
+/*****************************************FOOTER**********************************************************/
+#contact.galerie{
+    background-color: #000000;
+}
+
+#contact.livre{
+    background-color: #d3d3eb;
+}
+
+#contact.artiste{
+    background-color: #d3d3eb;
+}
+
+
+
+#contact{
+    height:70vh;
+    width: 79%;
+    margin: 100px;
+    margin-bottom: 30px ;
+    padding: 100px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    background-color:#4c4a61;
+    color:white;
+}
+ .contact-svg{
+     width: 50vh;
+     height: auto;
+     display: block;
+     margin: 40px;
+ }
+.contact-text h2{
+    color: #ffffff;
+    font-size:2rem;
+    margin-bottom:30px;
+    font-family: 'outfit', sans-serif;
+}
+
+.contact-text p{
+    font-size: 1rem;
+    font-family: 'outfit', sans-serif;
+    line-height:1.8;
+    max-width:70%;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-form label{
+    font-weight:bold;
+    font-size:1rem;
+    font-family: 'outfit', sans-serif;
+}
+
+.contact-form input, .contact-form select, .contact-form textarea{
+    background:none;
+    font-family: 'outfit', sans-serif;
+    border:none;
+    border-bottom:2px solid white;
+    color: #ffffff;
+    padding:5px 0;
+    font-size:1rem;
+}
+
+.contact-form select option{
+    color: #000000;
+}
+
+textarea{
+    resize:none;
+    height:100px;
+}
+
+.consent{
+    display:flex;
+    font-family: outfit, sans-serif;
+    align-items:center;
+    gap:10px;
+}
+
+button{
+    width:300px;
+    padding:20px;
+    border:none;
+    background: #ffffff;
+    color: #4b4960;
+    font-weight:bold;
+    border-radius:6px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
 }
 
     /*********************************************************** Media *********************************************/
@@ -385,4 +507,14 @@ h3{
         #container-gal{
             grid-template-columns: 1fr;
         }
+    }
+
+    @media (max-width:900px){
+
+     #contact{
+            grid-template-columns:1fr;
+            gap:50px;
+            padding:50px;
+            }
+
     }
