@@ -46,9 +46,6 @@ body.books header nav ul li a{
     color: white;
 }
 
-body.books{
-    background-color: #4c4a61;
-}
 
 
 .slide{
@@ -73,13 +70,10 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #97123e;
     }
 
 header nav{
     width: 50%;
-    height: 100%;
-    background-color: #2e2e8f;
     display: flex;
     align-items: center;
     }
@@ -89,7 +83,6 @@ header nav ul{
     display: flex;
     justify-content: space-evenly;
     list-style:none;
-    background-color: #2e2e8f;
     }
 
 header nav ul li a{
@@ -200,238 +193,9 @@ header nav ul li a{
     height: auto;
     display: block;
     }
-
-    /********************** top index *****************************/
-
-.top-container{
-    grid-column: 1 / span 12;
-    position: relative;
-    width: 99%;
-    max-width: 100%;
-    height: 95vh;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-
-.imggauche{
-    position: absolute;
-    top: 35px;
-    left: 50px ;
-    width: 700px;
-    height: auto;
-    border-radius: 30px;
-    display: block;
-    animation: arriveeGauche 1.2s ease-out forwards;
-    }
-
-h1{
-    margin: 0;
-    width: auto;
-}
-h1 img{
-    width: 200px;
-    height: auto;
-    display: block;
-    animation: arriveeCentre 1.2s ease-out forwards;
-}
-
-.imgdroite{
-    position: absolute;
-    bottom: 30px;
-    right: 50px ;
-    width: 600px;
-    height: auto;
-    display: block;
-    border-radius: 30px;
-    animation: arriveeDroite 1.2s ease-out forwards;
-}
-
-.imggauche,
-.imgdroite{
-    transition: transform .3s ease;
-}
-
-.imggauche:hover,
-.imgdroite:hover{
-    transform: scale(1.05);
-}
-
-
-
-.social-links{
-    position: absolute;
-    height: 70px;
-    bottom: 30px;
-    left: 100px;
-    display: flex;
-    margin-top: 10px;
-    gap: 150px;
-    animation: arriveeGauche 1.2s ease-out forwards;
-}
-.social-links img{
-    width: 50px;
-    height: 50px;
-    transition: transform .2s ease;
-}
-
-.social-links img:hover{
-    transform: translateY(-3px);
-}
-    /************************************************** GALERIE HOME *************************************************/
-    #galerie h2{
-        font-family: "outfit", sans-serif;
-        font-size: 15px;
-        justify-items: center;
-        text-align: center;
-        align-items: center;
-        overflow: hidden;
-    }
-
-    h2{
-        justify-items: center;
-        align-items: center;
-    }
-
-    #galerie .container{
-        padding-top: 400px;
-        overflow: hidden;
-    }
-
-    #container-gal{
-        display: grid;
-        height: 250vh;
-        grid-template-columns: repeat(17, 1fr);
-        grid-template-rows: repeat(14, 1fr);
-        gap: 20px;
-        overflow: hidden;
-    }
-
-    .img1{
-        grid-column: 2 / span 5;
-        grid-row: 4 / span 2;
-    }
-
-
-    .img2{
-        grid-column: 1 / span 5;
-        grid-row: 6 / span 3 ;
-    }
-
-    .img3{
-        grid-column: 6 / span 5;
-        grid-row: 6 / span 2 ;
-    }
-
-    .img4{
-        grid-column: 6 / span 4;
-        grid-row: 11 / span 3 ;
-    }
-
-    .img5{
-        grid-column: 14 / span 4;
-        grid-row: 9 / span 3 ;
-    }
-
-    .img6{
-        grid-column: 11 / span 3;
-        grid-row: 4 / span 4 ;
-    }
-
-    .img7{
-        grid-column: 2 / span 4;
-        grid-row: 9 / span 3 ;
-    }
-
-    .img8{
-        grid-column: 6 / span 8;
-        grid-row: 8 / span 3 ;
-    }
-
-    .img9{
-        grid-column: 7 / span 4;
-        grid-row: 3 / span 3 ;
-    }
-
-    .img10{
-        grid-column: 14 / span 4;
-        grid-row: 3 / span 3 ;
-    }
-
-    .img11{
-        grid-column: 14 / span 4;
-        grid-row: 6 / span 3 ;
-    }
-    .img12{
-        grid-column: 10 / span 4;
-        grid-row: 11 / span 2 ;
-    }
-
-
-
-
-
-    .images a{
-        display: block;
-        width: 100%;
-        height: 100%;
-        text-decoration: none;
-        opacity: 0;
-        transform: translateY(50px) scale(0.95);
-        transition: all 0.8s ease;
-    }
-
-    .images a.visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-        overflow: hidden;
-    }
-
-    .images a img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center center ;
-    }
-
-    /**************************************************PRESENTATION ARTISTE***********************************/
-.artist{
-    width: 100%;
-    min-height: 100vh;
-    border:10px solid lime;
-    display:block;
-}
-
-.artist-pres{
-    display:flex;
-    gap:100px;
-    border: solid 5px yellow;
-    align-items:center;
-    color: white;
-    width: 99%;
-}
-.artist-pres img{
-    width:500px;
-    height:auto;
-}
-.artist-text{
-    width:400px;
-    font-family: 'outfit', sans-serif;
-}
-
-h4{
-    font-family: 'outfit', sans-serif;
-    font-size: 30px;
-    color: white;
-}
 /*****************************************FOOTER**********************************************************/
 #contact.galerie{
     background-color: #000000;
-}
-
-#contact.livre{
-    background-color: #d3d3eb;
 }
 
 #contact.artiste{
@@ -450,7 +214,6 @@ h4{
     gap:30px;
     background-color:#4c4a61;
     color:white;
-    border: 10px solid red;
 }
  .contact-svg{
      width: 50vh;
@@ -524,6 +287,460 @@ button{
 
 button:hover{
     transform:translateY(-3px);
+}
+
+/********************** top index *****************************/
+
+.top-container{
+    grid-column: 1 / span 12;
+    position: relative;
+    width: 99%;
+    max-width: 100%;
+    height: 95vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imggauche{
+    position: absolute;
+    top: 35px;
+    left: 50px ;
+    width: 700px;
+    height: auto;
+    border-radius: 30px;
+    display: block;
+    animation: arriveeGauche 1.2s ease-out forwards;
+}
+
+h1{
+    margin: 0;
+    width: auto;
+}
+h1 img{
+    width: 200px;
+    height: auto;
+    display: block;
+    animation: arriveeCentre 1.2s ease-out forwards;
+}
+
+.imgdroite{
+    position: absolute;
+    bottom: 30px;
+    right: 50px ;
+    width: 600px;
+    height: auto;
+    display: block;
+    border-radius: 30px;
+    animation: arriveeDroite 1.2s ease-out forwards;
+}
+
+.imggauche,
+.imgdroite{
+    transition: transform .3s ease;
+}
+
+.imggauche:hover,
+.imgdroite:hover{
+    transform: scale(1.05);
+}
+
+
+
+.social-links{
+    position: absolute;
+    height: 70px;
+    bottom: 30px;
+    left: 100px;
+    display: flex;
+    margin-top: 10px;
+    gap: 150px;
+    animation: arriveeGauche 1.2s ease-out forwards;
+}
+.social-links img{
+    width: 50px;
+    height: 50px;
+    transition: transform .2s ease;
+}
+
+.social-links img:hover{
+    transform: translateY(-3px);
+}
+/************************************************** HOME GALERIE *************************************************/
+#galerie h2{
+    font-family: "outfit", sans-serif;
+    font-size: 15px;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+h2{
+    justify-items: center;
+    align-items: center;
+}
+
+#galerie .container{
+    padding-top: 400px;
+    overflow: hidden;
+}
+
+#container-gal{
+    display: grid;
+    height: 250vh;
+    grid-template-columns: repeat(17, 1fr);
+    grid-template-rows: repeat(14, 1fr);
+    gap: 20px;
+    overflow: hidden;
+}
+
+.img1{
+    grid-column: 2 / span 5;
+    grid-row: 4 / span 2;
+}
+
+
+.img2{
+    grid-column: 1 / span 5;
+    grid-row: 6 / span 3 ;
+}
+
+.img3{
+    grid-column: 6 / span 5;
+    grid-row: 6 / span 2 ;
+}
+
+.img4{
+    grid-column: 6 / span 4;
+    grid-row: 11 / span 3 ;
+}
+
+.img5{
+    grid-column: 14 / span 4;
+    grid-row: 9 / span 3 ;
+}
+
+.img6{
+    grid-column: 11 / span 3;
+    grid-row: 4 / span 4 ;
+}
+
+.img7{
+    grid-column: 2 / span 4;
+    grid-row: 9 / span 3 ;
+}
+
+.img8{
+    grid-column: 6 / span 8;
+    grid-row: 8 / span 3 ;
+}
+
+.img9{
+    grid-column: 7 / span 4;
+    grid-row: 3 / span 3 ;
+}
+
+.img10{
+    grid-column: 14 / span 4;
+    grid-row: 3 / span 3 ;
+}
+
+.img11{
+    grid-column: 14 / span 4;
+    grid-row: 6 / span 3 ;
+}
+.img12{
+    grid-column: 10 / span 4;
+    grid-row: 11 / span 2 ;
+}
+.images a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: all 0.8s ease;
+}
+
+.images a.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    overflow: hidden;
+}
+
+.images a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center ;
+}
+/**************************************************PRESENTATION ARTISTE***********************************/
+#artist{
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-top: 400px;
+}
+.artist{
+    width: 100%;
+    min-height: 100vh;
+    display:block;
+}
+
+.artist-pres{
+    display:flex;
+    justify-content:center;
+    gap:250px;
+    margin-top:500px;
+    align-items:center;
+    color:white;
+    width:99%;
+    transition:all 1s ease;
+}
+
+.artist-pres img{
+    width:500px;
+    height:auto;
+    opacity:0;
+    transform:translateX(-100px);
+    transition:all 1s ease;
+}
+.artist-pres.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+
+.artist-pres img.visible,
+.artist-text.visible{
+    opacity:1;
+    transform:translateX(0);
+}
+
+.video-title,
+.artist-video{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all 1s ease;
+}
+.video-title.visible,
+.artist-video.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+.artist-pres img{
+    width:500px;
+    height:auto;
+}
+.artist-text{
+    width:400px;
+    font-family:'Outfit', sans-serif;
+    text-align:center;
+    color:white;
+    opacity:0;
+    transform:translateX(-100px);
+    transition:all 1s ease;
+}
+
+h4{
+    font-family: 'outfit', sans-serif;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 4px;
+    text-align: center;
+    animation: arriveeDroite 1.2s ease-out forwards
+}
+
+.artist-video{
+    margin-top: 50px;
+    margin-bottom: 300px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    animation: arriveeCentre 1.2s ease-out forwards;
+}
+.artist-video iframe{
+    width: 65vw !important;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+.video-title{
+    color:white;
+    text-align:center;
+    margin-top:500px;
+    font-family: 'outfit', sans-serif;
+    animation: arriveeCentre 1.2s ease-out forwards;
+}
+/*********************************GALLERY PAGE **************************/
+#logal{
+    position:absolute;
+    top:56%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:200px;
+    height:auto;
+    animation: arriveeCentre 1.2s ease-out forwards;
+}
+
+.gallery-subtitle{
+    text-align:center;
+    font-size:12px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color: #a1a1a1;
+    font-family: 'Outfit', sans-serif;
+    margin-top:10px;
+    animation: arriveeCentre 3s ease-in-out forwards;
+}
+.collection{
+    width:90%;
+    margin:auto;
+}
+
+.hero-image{
+    width:100%;
+    height:800px;
+    object-fit:cover ;
+    display:block;
+    object-position: center 10%;
+    transition:all 1s ease;
+    opacity: 0;
+
+}
+.hero-imagedusk{
+    width:100%;
+    height:800px;
+    object-fit:cover ;
+    display:block;
+    object-position: center 20%;
+    transition:all 1s ease;
+    opacity: 0;
+}
+.hero-image.visible, .hero-imagedusk.visible{
+    opacity: 1;
+    animation: arriveeCentre 1.2s ease-out forwards;
+
+}
+
+.infos{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    margin:30px 0;
+    text-align:center;
+    font-family:'Outfit', sans-serif;
+    font-size:20px;
+    letter-spacing:2px;
+    font-weight:500;
+    letter-spacing:2px;
+}
+.infos span{
+    opacity:0;
+}
+
+.infos.visible span:nth-child(1){
+    animation:arriveeCentre 1.2s ease-out forwards;
+    animation-delay:1s;
+}
+
+.infos.visible span:nth-child(2){
+    animation:arriveeCentre 1.2s ease-out forwards;
+    animation-delay:1.4s;
+}
+
+.infos.visible span:nth-child(3){
+    animation:arriveeCentre 1.2s ease-out forwards;
+    animation-delay:2s;
+}
+.bloc{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:40px;
+    margin:120px 0;
+    align-items:stretch;
+}
+.bloc-2{
+    grid-template-columns:1fr 2fr;
+}
+.bloc img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    opacity:0;
+    transition:all 1s ease;
+
+}
+.bloc-1 .txtgal,
+.bloc-1 img{
+    opacity:0;
+}
+.bloc-1 .txtgal{
+    text-align:left;
+}
+.bloc-2 .txtgal{
+    text-align:right;
+}
+.bloc-1 .txtgal.visible{
+    animation: arriveeGauche 1.2s ease-out forwards;
+    animation-delay:0.8s;
+}
+
+.bloc-1 img.visible{
+    animation:arriveeDroite 1.2s ease-out forwards;
+}
+
+.bloc-2 img,
+.bloc-2 .txtgal{
+    opacity:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    text-align:right;
+    align-items:flex-end;
+}
+
+.bloc-2 img.visible{
+    animation: arriveeGauche 1.2s ease-out forwards;
+
+}
+
+.bloc-2 .txtgal.visible{
+    animation:arriveeDroite 1.2s ease-out forwards;
+    animation-delay:0.8s;
+}
+.txtgal{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    min-height:500px;
+    padding:20px 0;
+}
+.txtgal h6{
+    margin:0;
+    font-family:'Outfit', sans-serif;
+    font-size:20px;
+    letter-spacing:2px;
+    font-weight:500;
+    letter-spacing:2px;
+}
+.description{
+    margin:0;
+    font-family:'Outfit', sans-serif;
+    font-size:16px;
+    line-height:1.8;
+    max-width:800px;
+
+}
+.collection{
+    width:90%;
+    margin:auto;
+    padding-bottom:150px;
 }
 /********************************KEYFRAMES ******************************************/
 
@@ -621,3 +838,19 @@ button:hover{
             padding: 50px;
         }
                                 }
+
+/**responsive gallery****/
+
+@media (max-width:768px){
+
+    .bloc,
+    .bloc-2{
+        grid-template-columns:1fr;
+    }
+
+    .txtgal{
+        min-height:auto;
+        gap:30px;
+    }
+
+}
