@@ -22,7 +22,6 @@ nb: c'est la derniere css ecrite dans index.html au debut dans les <link> qui a 
 *{
     margin: 0;
     padding: 0;
-
 }
 
 
@@ -112,21 +111,18 @@ header nav ul li a{
     }
 
 #burger .bar:nth-child(1)
-    {
-        top: 0;
+    {   top: 0;
         width: 100%;
     }
 
     #burger .bar:nth-child(2)
-    {
-        top: 50%;
+    {   top: 50%;
         width: 70%;
         transform: translateY(-50%);
     }
 
     #burger .bar:nth-child(3)
-    {
-        top: 100%;
+    {   top: 100%;
         transform: translateY(-100%);
         width: 45%;
     }
@@ -155,7 +151,7 @@ header nav ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #222222;
+    background-color: #4c4a61;
     position: fixed;
     top: 0;
     left: 100%;
@@ -193,6 +189,10 @@ header nav ul li a{
     height: auto;
     display: block;
     }
+/*barres artist ne pas oublier*****************/
+body.artist #burger .bar{
+    background-color:white;
+}
 /*****************************************FOOTER**********************************************************/
 #contact.galerie{
     background-color: #000000;
@@ -201,7 +201,6 @@ header nav ul li a{
 #contact.artiste{
     background-color: #d3d3eb;
 }
-
 
 
 #contact{
@@ -580,6 +579,15 @@ h4{
     font-family: 'outfit', sans-serif;
     animation: arriveeCentre 1.2s ease-out forwards;
 }
+
+.artist-video iframe{
+    width:80vw;
+    max-width:1000px;
+    aspect-ratio:16/9;
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+}
 /*********************************GALLERY PAGE **************************/
 #logal{
     position:absolute;
@@ -710,7 +718,6 @@ h4{
 
 .bloc-2 img.visible{
     animation: arriveeGauche 1.2s ease-out forwards;
-
 }
 
 .bloc-2 .txtgal.visible{
@@ -786,19 +793,16 @@ h4{
     @media all and (max-width: 1080px)
     {
         #hero{
-            grid-column: 3 / span 6;
-        }
+            grid-column: 3 / span 6;}
     }
 
     @media all and (max-width: 815px)
     {
         header nav ul{
-            display: none;
-        }
+            display: none;}
 
         header nav{
-            justify-content: end;
-        }
+            justify-content: end;}
 
         #burger{
             display: block;
@@ -832,7 +836,6 @@ h4{
             grid-template-columns: 1fr;
         }
     }
-
     @media (max-width:900px) {
 
         #contact {
@@ -849,11 +852,9 @@ h4{
         padding:50px;
         height:auto;
     }
-
     .contact-text p{
         max-width:100%;
     }
-
     .contact-svg{
         max-width:300px;
         margin:20px auto;
@@ -1127,11 +1128,12 @@ h4{
         width:280px;
         max-width:none;
     }
-
     .artist-text{
         width:280px;
         text-align:center;
     }
+
+
 
     h4{
         margin:0 0 20px 0;
@@ -1144,15 +1146,6 @@ h4{
         display:flex;
         justify-content:center;
         margin:40px auto 150px;
-    }
-
-    .artist-video iframe{
-        width:80vw;
-        max-width:1000px;
-        aspect-ratio:16/9;
-        border:none;
-        border-radius:20px;
-        overflow:hidden;
     }
     .video-title{
         max-width:600px;
@@ -1172,7 +1165,6 @@ h4{
     }
 
 }
-
 @media screen and (min-width:769px) and (max-width:1200px){
 
     #artist{
@@ -1215,14 +1207,6 @@ h4{
         margin:40px auto 150px;
     }
 
-    .artist-video iframe{
-        width:80vw;
-        max-width:1000px;
-        aspect-ratio:16/9;
-        border:none;
-        border-radius:20px;
-        overflow:hidden;
-    }
     .video-title{
         max-width:600px;
         margin:120px auto 40px;
